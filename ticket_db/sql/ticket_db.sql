@@ -1,5 +1,6 @@
 -- ============================================================
 -- 演出票务系统 ticket_db · 建库 + 建表脚本
+-- 对应schema.sql
 -- 依据：ticket_db表结构说明.xlsx
 -- 表清单：user（用户）、event（场次）、seat_category（票档）、
 --         ticket_order（订单）、notification（通知）
