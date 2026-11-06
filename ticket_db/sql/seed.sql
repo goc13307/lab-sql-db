@@ -217,8 +217,9 @@ BEGIN
     END IF;
 
     -- ---- ④ 探测 ticket_order 是否含 event_id 列，兼容两版建表脚本 ----
-    -- schema.sql（定稿版）的 ticket_order 有 event_id；db/ticket_db.sql（旧版）没有该列。
-    -- 有列则写入场次，无列则只写票档（场次可由 category_id 外键反推）。
+    -- 当前 schema.sql（定稿版）的 ticket_order 有 event_id；旧版 ticket_db.sql 没有该列。
+    -- 本仓库已切换为 schema.sql，因此实际走"有 event_id"分支（v_has_event_id > 0）；
+    -- 无列分支仅用于历史/旧库回退场景，正常定稿流程不触发。
     SELECT COUNT(*) INTO v_has_event_id
       FROM information_schema.COLUMNS
      WHERE TABLE_SCHEMA = 'ticket_db'
@@ -322,8 +323,8 @@ FROM notification n
 JOIN ticket_order o ON o.order_id = n.order_id
 WHERE n.user_id <> o.user_id;
 
--- 6.3 订单「场次-票档」一致性核对（仅当 ticket_order 含 event_id 列时执行）
---     旧版 db/ticket_db.sql 的订单表没有 event_id，此时场次一致性由 category_id 外键天然保证
+-- 6.3 订单「场次-票档」一致性核对（当前 schema.sql 含 event_id 列，必定执行）
+--     仅当 ticket_order 含 event_id 列时执行；旧版 ticket_db.sql 订单表无 event_id 时跳过
 SET @has_event_col := (
     SELECT COUNT(*)
       FROM information_schema.COLUMNS
