@@ -3,3 +3,5 @@ ticket_db_before_schema.sql
 
 # 任务/备注文档
 todo.md
+
+gitee_token.txt
