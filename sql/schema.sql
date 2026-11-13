@@ -9,10 +9,10 @@
 --   4. query_adv.sql     进阶查询
 --
 -- 一键执行（mysql 客户端，/ 为当前仓库目录）：
---   SOURCE ticket_db/sql/schema.sql;
---   SOURCE ticket_db/sql/seed.sql;
---   SOURCE ticket_db/sql/query_basic.sql;
---   SOURCE ticket_db/sql/query_adv.sql;
+--   SOURCE sql/schema.sql;
+--   SOURCE sql/seed.sql;
+--   SOURCE sql/query_basic.sql;
+--   SOURCE sql/query_adv.sql;
 --
 -- 重置方式：重跑 schema.sql 会 DROP DATABASE 重建，视图/触发器/存储过程一并消失，
 --           其后 3 个执行/查询脚本需重新执行（seed.sql 负责重建触发器与过程）。

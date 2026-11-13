@@ -12,8 +12,8 @@
 --   3 = 系统异常（SQL 异常，已回滚）
 --
 -- 执行方式（任选其一）：
---   1) 命令行：mysql -u root -p --default-character-set=utf8mb4 ticket_db < ticket_db/sql/sp_grab_ticket.sql
---   2) mysql> 中：SOURCE ticket_db/sql/sp_grab_ticket.sql;
+--   1) 命令行：mysql -u root -p --default-character-set=utf8mb4 ticket_db < sql/sp_grab_ticket.sql
+--   2) mysql> 中：SOURCE sql/sp_grab_ticket.sql;
 --
 -- 可重复执行：开头 DROP PROCEDURE IF EXISTS，重复执行不会报 ERROR 1304。
 -- 验证用例见同目录 sp_grab_ticket_verify.sql（覆盖 0/1/2/3 四个返回码）。

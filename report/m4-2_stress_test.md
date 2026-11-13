@@ -48,7 +48,7 @@ CALL sp_grab_ticket(1,3,10,1,@p_result_code);
 
 ```cmd
 mysqlslap --host=127.0.0.1 -u root -p1234 --create-schema=ticket_db ^
-  --query=report/grab.sql --delimiter=";" ^
+  --query=script/grab.sql --delimiter=";" ^
   --concurrency=200 --iterations=1 --number-of-queries=10000
 ```
 
@@ -155,7 +155,7 @@ FROM seat_category sc WHERE sc.category_id = 10;
 
 ```cmd
 mysqlslap --host=127.0.0.1 -u root -p1234 --create-schema=ticket_db ^
-  --query=report/grab.sql --delimiter=";" ^
+  --query=script/grab.sql --delimiter=";" ^
   --concurrency=200 --iterations=5 --number-of-queries=10000
 ```
 
@@ -208,5 +208,5 @@ Benchmark
 
 ## 附：原始数据
 
-- `report/grab.sql` —— 压测语句
+- `script/grab.sql` —— 压测语句
 - `report/lock_metrics_raw.txt` —— 80 个采样点的原始锁指标数据

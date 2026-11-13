@@ -14,8 +14,8 @@
 
 | 文件 | 作用 |
 |---|---|
-| `ticket_db/sql/sp_grab_ticket.sql` | 建存储过程（含 `DROP PROCEDURE IF EXISTS`，可重复执行） |
-| `ticket_db/sql/sp_grab_ticket_verify.sql` | 5 个验证用例，覆盖返回码 0/1/2/3，跑完自动清理 |
+| `sql/sp_grab_ticket.sql` | 建存储过程（含 `DROP PROCEDURE IF EXISTS`，可重复执行） |
+| `sql/sp_grab_ticket_verify.sql` | 5 个验证用例，覆盖返回码 0/1/2/3，跑完自动清理 |
 
 ## 存储过程设计
 

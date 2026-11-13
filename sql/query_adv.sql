@@ -4,8 +4,8 @@
 -- 目标版本：MySQL 8.0+（依赖窗口函数 RANK/ROW_NUMBER/LAG，5.7 不支持窗口函数）
 -- ----------------------------------------------------------------------------
 -- 执行方式（任选其一）：
---   1) 命令行：mysql -u root -p --default-character-set=utf8mb4 < ticket_db/sql/query_adv.sql
---   2) mysql> 中：SOURCE ticket_db/sql/query_adv.sql;
+--   1) 命令行：mysql -u root -p --default-character-set=utf8mb4 < sql/query_adv.sql
+--   2) mysql> 中：SOURCE sql/query_adv.sql;
 --
 -- 文件结构：
 --   进阶①  全局热销票档 Top-3（跨场次比销量，RANK）

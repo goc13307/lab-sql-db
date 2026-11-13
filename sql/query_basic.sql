@@ -4,8 +4,8 @@
 -- 目标版本：MySQL 8.0+（本文件仅使用视图与聚合查询，MySQL 5.7 同样可执行）
 -- ----------------------------------------------------------------------------
 -- 执行方式（任选其一）：
---   1) 命令行：mysql -u root -p --default-character-set=utf8mb4 < db/sql/query_basic.sql
---   2) mysql> 中：SOURCE db/sql/query_basic.sql;
+--   1) 命令行：mysql -u root -p --default-character-set=utf8mb4 < sql/query_basic.sql
+--   2) mysql> 中：SOURCE sql/query_basic.sql;
 --
 -- 文件结构：
 --   0. 视图 v_event_remain   场次级余票视图（查询①直接基于它）

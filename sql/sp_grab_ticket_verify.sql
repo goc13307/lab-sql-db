@@ -7,7 +7,7 @@
 --                            SUM(seat_category.sold_tickets) = 5148
 --
 -- 执行方式：
---   mysql -u root -p --default-character-set=utf8mb4 ticket_db < ticket_db/sql/sp_grab_ticket_verify.sql
+--   mysql -u root -p --default-character-set=utf8mb4 ticket_db < sql/sp_grab_ticket_verify.sql
 -- ============================================================================
 
 USE ticket_db;

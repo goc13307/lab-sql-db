@@ -16,8 +16,8 @@
 --   └───────────────┴────────┴─────────────────────────────────────────────────────┘
 --
 -- 执行方式（任选其一）：
---   1) 命令行：mysql -u root -p --default-character-set=utf8mb4 < db/seed.sql
---   2) mysql> 中：SOURCE db/seed.sql;
+--   1) 命令行：mysql -u root -p --default-character-set=utf8mb4 < sql/seed.sql
+--   2) mysql> 中：SOURCE sql/seed.sql;
 --
 -- 可重复执行：脚本开头按外键反序 TRUNCATE 五张表并复位 AUTO_INCREMENT，
 --             随后按依赖顺序重造，最终行数固定为 1000 / 5 / 20 / 5000 / 5000。
