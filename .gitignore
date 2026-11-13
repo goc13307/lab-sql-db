@@ -1,9 +1,10 @@
 # 本机数据库备份（仅回退用，不入库）
 ticket_db_before_schema.sql
+ticket_db_before_sp_grab_ticket.sql
+ticket_db_before_stress_test.sql
 
 # 任务/备注文档
 todo.md
 
 gitee_token.txt
 todo_class5pm.md
-ticket_db/sql/sp_grab_ticket.sql
